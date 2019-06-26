@@ -12,9 +12,15 @@ class ArticlesController < ApplicationController
   def create
     @article = current_user.articles.build(article_params)
     if @article.save
-      flash[:success] = "Micropost created!"
-      redirect_to root_path
+      flash[:success] = "New artilcle created!"
+      redirect_to articles_path
     end
+  end
+
+  def destroy
+    @article.destroy
+    flash[:success] = "Article deleted"
+    redirect_to request.referrer || root_url
   end
 
   def show
@@ -22,11 +28,15 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-  def destroy
-    #binding.pry
-    @article.destroy
-    flash[:success] = "Article deleted"
-    redirect_to request.referrer || root_url
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    @article.update(article_params)
+    flash[:success] = "Article Update"
+    redirect_to articles_path
   end
 
   private 
