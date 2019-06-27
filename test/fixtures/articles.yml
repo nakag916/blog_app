@@ -7,3 +7,7 @@ one:
 two:
   content: MyText
   user: two
+
+article_1:
+  title: Greeting
+  content: Hola,mundo 

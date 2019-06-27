@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :correct_user, only: :destroy
+  before_action :correct_user_article, only: :destroy
 
   def index
     @articles = Article.all
@@ -14,6 +14,9 @@ class ArticlesController < ApplicationController
     if @article.save
       flash[:success] = "New artilcle created!"
       redirect_to articles_path
+    else
+      flash[:danger] = "Failed to creat new article"
+      redirect_to new_article_path
     end
   end
 
@@ -44,7 +47,7 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:content, :title)
    end
 
-   def correct_user
+   def correct_user_article
     @article = current_user.articles.find_by(id: params[:id])
     redirect_to root_url if @article.nil?
    end
