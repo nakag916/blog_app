@@ -1,0 +1,9 @@
+<h1><%= @user.name %></h1>
+<div class="center jumbotron">
+  <% @articles.each do |article| %>
+   <p><%= article.title %></p>
+   <p><%= article.content %></p>
+   <p><%= article.created_at %></p>
+   <hr>
+ <% end %>
+</div>
