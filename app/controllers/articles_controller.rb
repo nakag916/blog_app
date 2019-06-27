@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :logged_in_user, only: [:index, :new, :create, :destroy, :edit]
   before_action :correct_user_article, only: :destroy
 
   def index
@@ -51,4 +52,11 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.find_by(id: params[:id])
     redirect_to root_url if @article.nil?
    end
+
+   def logged_in_user 
+    unless logged_in?
+     flash[:danger] = "Please log in."
+     redirect_to root_path
+    end
+  end
 end
