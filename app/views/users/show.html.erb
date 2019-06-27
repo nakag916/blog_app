@@ -1,7 +1,7 @@
 <h1><%= @user.name %></h1>
 <div class="center jumbotron">
   <% @articles.each do |article| %>
-   <p><%= article.title %></p>
+   <p><%= link_to article.title, article_path(article.id) %></p>
    <p><%= article.content %></p>
    <p><%= article.created_at %></p>
    <hr>
