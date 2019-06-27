@@ -6,10 +6,8 @@
   <p><%= article.created_at %></p>
 
   <p>
-   <%= link_to "Edit", edit_article_path(article.id) %>
-   <% if current_user?(article.user) %>
+    <%= link_to "Edit", edit_article_path(article.id) %>
     <%= link_to "Delete", article, method: :delete, data: { confirm: "You sure?"}  %>
-   <% end %>
   </p>
 
   <hr>
