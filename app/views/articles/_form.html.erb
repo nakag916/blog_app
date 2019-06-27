@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@article) do |f| %>
+      
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :content %>
+      <%= f.text_area :content, :size => "60x15" %>
+
+      <%= f.submit "Post Article", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
