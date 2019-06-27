@@ -1,10 +1,11 @@
 <h1>Articles List</h1>
 <div class="center jumbotron">
  <% @articles.each do |article| %>
-  <p><%= article.title %></p>
-  <p><%= article.content %></p>
-  <p><%= article.created_at %></p>
-  <p><%= article.user.name %></p>
+  <p> Title: <%= article.title %></p>
+  <p><%= markdown(article.content) %></p>
+  <p> Date: <%= article.created_at %></p>
+  <p> Writer: <%= article.user.name %></p>
   <hr>
  <% end %>
+ <%= paginate @articles %>
 </div>
