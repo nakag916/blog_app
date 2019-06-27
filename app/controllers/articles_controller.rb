@@ -1,9 +1,9 @@
 class ArticlesController < ApplicationController
-  before_action :logged_in_user, only: [:index, :new, :create, :destroy, :edit]
+  before_action :logged_in_user, except: :show
   before_action :correct_user_article, only: :destroy
 
   def index
-    @articles = Article.all
+    @articles = current_user.articles
   end
 
   def new
