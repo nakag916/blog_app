@@ -1,13 +1,16 @@
-<div class="center">
+<div class="d-flex justify-content-center">
+ <div class="element bold">記事の一覧</div>
+ <hr>
  <% @articles.each do |article| %>
- <section id= "article">
-  <p class="bold"> <%= link_to article.title, article_path(article.id) %></p>
-  <p> <%= article.short_content %> </p>
-  <p> <%= article.user.name %></p>
-  <p> <%= time_ago_in_words(article.created_at) %> 前</p>
- </section>
+  <%= link_to article_path(article.id), class: 'hoge' do%>
+  <section id= "article">
+    <p class="element2 bold"> <%= article.title %></p>
+    <p class="elemnent2"> <%= article.short_content %> </p>
+    <div class="element3"><%= article.user.name %><div>
+    <div class="elememt3"><%= time_ago_in_words(article.created_at) %>前<div>
+   </section>
+  <% end %>
   <hr>
  <% end %>
 </div>
 <h4 class="center"><%= paginate @articles %></h1>
-
