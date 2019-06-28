@@ -1,11 +1,13 @@
-<h1>Articles List</h1>
-<div class="center jumbotron">
+<div class="center">
  <% @articles.each do |article| %>
-  <p> Title: <%= article.title %></p>
-  <p><%= markdown(article.content) %></p>
-  <p> Date: <%= article.created_at %></p>
-  <p> Writer: <%= article.user.name %></p>
+ <section id= "article">
+  <p class="bold"> <%= link_to article.title, article_path(article.id) %></p>
+  <p> <%= article.short_content %> </p>
+  <p> <%= article.user.name %></p>
+  <p> <%= time_ago_in_words(article.created_at) %> 前</p>
+ </section>
   <hr>
  <% end %>
- <%= paginate @articles %>
 </div>
+<h4 class="center"><%= paginate @articles %></h1>
+

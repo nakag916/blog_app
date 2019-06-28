@@ -1,5 +1,5 @@
-<div class="center jumbotron">
+<div class="center">
  <p><%= @article.title %></p>
- <p><%= @article.content %></p>
+ <p><%= markdown(@article.content) %></p>
  <p><%= @article.created_at %></p>
 </div>
