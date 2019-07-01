@@ -1,16 +1,21 @@
 <h1 class="center">Articles List</h1>
-<div class="center">
+<hr>
+<div class="container">
  <% @articles.each do |article| %>
-  <section id= "article">
-   <p class="bold"> <%= link_to article.title, article_path(article.id) %></p>
-   <p> <%= markdown(article.content) %> </p>
-   <p> <%= article.user.name %></p>
-   <p> <%= time_ago_in_words(article.created_at) %> 前</p>
-   <p class="center">
-    <%= link_to "Edit", edit_article_path(article.id) %> &nbsp;&nbsp;
-    <%= link_to "Delete", article, method: :delete, data: { confirm: "You sure?"}  %>
-  </p>
-  </section>
+  <%= link_to article_path(article.id), class: 'hoge' do %>
+   <section id= "article">
+    <p class="element2 bold"> <%= article.title %></p>
+    <p class="element2"> <%= article.short_content %> </p>
+    <p class="element3"> <%= time_ago_in_words(article.created_at) %>前</p>
+    <div class="element6 btn btn-primary">
+     <%= link_to "Edit", edit_article_path(article.id) %>
+    </div>
+    &nbsp;&nbsp;
+    <div class="element6 btn btn-primary">
+     <%= link_to "Delete", article, method: :delete, data: { confirm: "You sure?"}  %>
+    </div>
+   </section>
+  <% end %>
   <hr>
  <% end %>
 </div>

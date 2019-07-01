@@ -23,6 +23,7 @@ body {
 }
 
 section {
+  padding: 5px;
   overflow: auto;
 }
 
@@ -44,17 +45,29 @@ textarea {
 
 .element {
   padding: 24px 0;
+  color: #222;
   font-size: 20px;
-  color: #222
 }
 
 .element2 {
-  font-size: 20px;
   color: #222;
+  font-size: 20px;
 }
 
 .element3 {
   color: #787c7b;
+}
+
+//記事ページのタイトル
+.element4 {
+  color: #222;
+  font-size: 32px;
+}
+
+//記事本文
+#element5 {
+  color: #222;
+  font-size: 18px;
 }
 
 #article:hover {
@@ -67,7 +80,7 @@ a {
   text-decoration: none;
 }
 /* line 52, /Users/pt2101/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_scaffolding.scss */
-a:hover, a:focus {
+a:hover, a:focus{
   color: #222;
   text-decoration: none;
 }
