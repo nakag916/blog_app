@@ -7,11 +7,11 @@
     <p class="element2 bold"> <%= article.title %></p>
     <p class="element2"> <%= article.short_content %> </p>
     <p class="element3"> <%= time_ago_in_words(article.created_at) %>前</p>
-    <div class="element6 btn btn-primary">
+    <div class="btn btn-primary">
      <%= link_to "Edit", edit_article_path(article.id) %>
     </div>
     &nbsp;&nbsp;
-    <div class="element6 btn btn-primary">
+    <div class="btn btn-danger">
      <%= link_to "Delete", article, method: :delete, data: { confirm: "You sure?"}  %>
     </div>
    </section>
