@@ -45,17 +45,29 @@ textarea {
 
 .element {
   padding: 24px 0;
+  color: #222;
   font-size: 20px;
-  color: #222
 }
 
 .element2 {
-  font-size: 20px;
   color: #222;
+  font-size: 20px;
 }
 
 .element3 {
   color: #787c7b;
+}
+
+//記事ページのタイトル
+.element4 {
+  color: #222;
+  font-size: 32px;
+}
+
+//記事本文
+#element5 {
+  color: #222;
+  font-size: 18px;
 }
 
 #article:hover {

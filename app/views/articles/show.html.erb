@@ -1,5 +1,5 @@
 <div class="center">
- <p class=""><%= @article.title %></p>
- <p class=""><%= markdown(@article.content) %></p>
- <p class=""><%= time_ago_in_words(@article.created_at) %>前</p>
+ <div class="element4 bold"><%= @article.title %></div>
+ <h4 class="element5"><%= markdown(@article.content) %></h4>
+ <div class="element3"><%= time_ago_in_words(@article.created_at) %>前</div>
 </div>

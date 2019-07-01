@@ -3,14 +3,14 @@
  <hr>
  <% @articles.each do |article| %>
   <%= link_to article_path(article.id), class: 'hoge' do%>
-  <section id= "article">
+   <section id= "article">
     <p class="element2 bold"> <%= article.title %></p>
     <p class="elemnent2"> <%= article.short_content %> </p>
     <div class="element3"><%= article.user.name %><div>
     <div class="elememt3"><%= time_ago_in_words(article.created_at) %>前<div>
    </section>
-  <% end %>
+   <% end %>
   <hr>
  <% end %>
 </div>
-<h4 class="center"><%= paginate @articles %></h1>
+<h4 class="center"><%= paginate @articles %></h4>
