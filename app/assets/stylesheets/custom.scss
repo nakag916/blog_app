@@ -23,6 +23,7 @@ body {
 }
 
 section {
+  padding: 5px;
   overflow: auto;
 }
 
@@ -67,7 +68,7 @@ a {
   text-decoration: none;
 }
 /* line 52, /Users/pt2101/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_scaffolding.scss */
-a:hover, a:focus {
+a:hover, a:focus{
   color: #222;
   text-decoration: none;
 }

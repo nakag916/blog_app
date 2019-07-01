@@ -2,15 +2,18 @@
 <div class="center">
  <% @articles.each do |article| %>
   <section id= "article">
-   <p class="bold"> <%= link_to article.title, article_path(article.id) %></p>
-   <p> <%= markdown(article.content) %> </p>
-   <p> <%= article.user.name %></p>
-   <p> <%= time_ago_in_words(article.created_at) %> 前</p>
-   <p class="center">
-    <%= link_to "Edit", edit_article_path(article.id) %> &nbsp;&nbsp;
+   <p class="element2 bold"> <%= link_to article.title, article_path(article.id) %></p>
+   <p class="element2"> <%= markdown(article.content) %> </p>
+   <p class="element3"> <%= article.user.name %></p>
+   <p class="element3"> <%= time_ago_in_words(article.created_at) %>前</p>
+   <p class="btn btn-primary">
+    <%= link_to "Edit", edit_article_path(article.id) %>
+   </p>
+   &nbsp;&nbsp;
+   <p class="btn btn-primary">
     <%= link_to "Delete", article, method: :delete, data: { confirm: "You sure?"}  %>
-  </p>
-  </section>
+   </p>
+   </section>
   <hr>
  <% end %>
 </div>
