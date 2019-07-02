@@ -71,12 +71,24 @@ textarea {
 }
 
 //buttonの文字を白に変更
-.element6{
-  color: white; 
-}
-
 #article:hover {
   background-color: #f5f5f5;
+}
+
+.btn-primary a{
+  color: white;
+}
+
+.btn-danger a {
+  color: white;
+}
+
+.btn-primary a:hover{
+  color: white;
+}
+
+.btn-danger a:hover{
+  color: white;
 }
 
 /* line 48, /Users/pt2101/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_scaffolding.scss */

@@ -6,8 +6,8 @@
    <section id= "article">
     <p class="element2 bold"> <%= article.title %></p>
     <p class="elemnent2"> <%= article.short_content %> </p>
-    <div class="element3"><%= article.user.name %><div>
-    <div class="elememt3"><%= time_ago_in_words(article.created_at) %>前<div>
+    <p class="element3"><%= article.user.name %></p>
+    <p class="elememt3"><%= time_ago_in_words(article.created_at) %>前</p>
    </section>
    <% end %>
   <hr>
