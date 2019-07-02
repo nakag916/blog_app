@@ -6,6 +6,7 @@
    <section id= "article">
     <p class="element2 bold"> <%= article.title %></p>
     <p class="element2"> <%= article.short_content %> </p>
+    <p class="element3"><%= article.user.name %></p>
     <p class="element3"> <%= time_ago_in_words(article.created_at) %>前</p>
     <div class="btn btn-primary">
      <%= link_to "Edit", edit_article_path(article.id) %>
@@ -19,4 +20,3 @@
   <hr>
  <% end %>
 </div>
-<%= paginate @articles %>
