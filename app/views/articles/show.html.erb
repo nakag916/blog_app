@@ -2,7 +2,7 @@
  <div class="col-md-4 col-md-offset-4">
   <div class="element4 bold"><%= @article.title %></div>
   <h4 class="element5"><%= markdown(@article.content) %></h4>
-  <div class="element3"><%= @article.user.name %></div>
+  <div class="element3"><%= link_to @article.user.name, user_path(@article.user.id) %></div>
   <div class="element3"><%= time_ago_in_words(@article.created_at) %>前</div>
  </div>
 </div>
