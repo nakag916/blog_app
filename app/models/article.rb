@@ -5,6 +5,6 @@ class Article < ApplicationRecord
   default_scope -> { order(created_at: :desc)}
 
   def short_content
-    self.content[0..100] + "..."
+    self.content[0..99] + "..."
   end
 end
