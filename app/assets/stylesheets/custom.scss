@@ -17,14 +17,14 @@
   @include box_sizing;
 }
 
-/* universal */
-body {
-  padding-top: 60px;
-}
-
 section {
   padding: 5px;
   overflow: auto;
+}
+
+/* universal */
+body {
+  padding-top: 60px;
 }
 
 textarea {
@@ -57,6 +57,9 @@ textarea {
 .element3 {
   color: #787c7b;
 }
+.element3 a{
+  color: #787c7b;
+}
 
 //記事ページのタイトル
 .element4 {
@@ -72,6 +75,14 @@ textarea {
 
 //buttonの文字を白に変更
 #article:hover {
+  background-color: #f5f5f5;
+}
+
+#article div{
+  color: #787c7b;
+}
+
+section:hover {
   background-color: #f5f5f5;
 }
 
