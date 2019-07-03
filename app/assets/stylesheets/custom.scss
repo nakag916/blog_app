@@ -17,14 +17,14 @@
   @include box_sizing;
 }
 
-section {
-  padding: 5px;
-  overflow: auto;
-}
-
 /* universal */
 body {
   padding-top: 60px;
+}
+
+section {
+  padding: 5px;
+  overflow: auto;
 }
 
 textarea {
